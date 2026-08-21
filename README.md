@@ -13,7 +13,7 @@ Dire Pay is a mobile-first Ethiopian payments experience built around a simple i
 - Dire Card product preview and lock control
 - Profile and security controls
 - Local demo persistence
-- Vercel-ready deployment configuration
+- GitHub Pages-ready static deployment
 
 ## Run locally
 
@@ -30,3 +30,5 @@ Then open `http://localhost:3000`.
 This release is a product prototype using simulated money. It does not hold funds, perform KYC, connect to banks or wallets, or execute regulated transactions.
 
 See `ARCHITECTURE.md` for the production path covering identity, double-entry ledger, payment-provider adapters, reconciliation, security, fraud controls and compliance operations.
+
+Deployment trigger: GitHub Pages branch publishing is enabled from `main` / `(root)`.
