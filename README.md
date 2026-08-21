@@ -1,19 +1,34 @@
 # Dire Pay
 
-Dire Pay is a mobile-first Ethiopian payments experience built around a simple idea: send, receive and manage ETB using a phone number or DireTag.
+Dire Pay is a mobile-first Ethiopian payments prototype built around sending, receiving and managing ETB using a phone number or DireTag.
 
-## v0.1 includes
+## Current prototype
 
-- Cash-App-inspired mobile interface
+- Mobile-first interface
 - Simulated ETB wallet balance
-- Send flow with review and confirmation
-- Request-money flow
-- Transaction activity feed
-- Dire QR receive experience
-- Dire Card product preview and lock control
-- Profile and security controls
-- Local demo persistence
-- GitHub Pages-ready static deployment
+- Send and request flows
+- Transaction activity
+- Dire Card preview
+- Profile and security screens
+
+## Deployment architecture
+
+GitHub is the source of truth.
+
+- Production branch: `main`
+- Production host: Vercel
+- Production URL: `https://dire-pay.vercel.app`
+- Static entry point: `/index.html`
+- Vercel configuration: `/vercel.json`
+- No GitHub Pages deployment
+- No runtime loader that fetches HTML from GitHub
+- No local-file-path deployments
+
+The intended workflow is:
+
+`change code -> commit to GitHub -> Vercel deploys that commit -> production`
+
+Do not manually replace production with temporary loader pages or files from `/mnt/data`.
 
 ## Run locally
 
@@ -27,8 +42,6 @@ Then open `http://localhost:3000`.
 
 ## Important
 
-This release is a product prototype using simulated money. It does not hold funds, perform KYC, connect to banks or wallets, or execute regulated transactions.
+This release is a prototype using simulated money. It does not hold funds, perform KYC, connect to banks or wallets, or execute regulated transactions.
 
 See `ARCHITECTURE.md` for the production path covering identity, double-entry ledger, payment-provider adapters, reconciliation, security, fraud controls and compliance operations.
-
-Deployment trigger: GitHub Pages branch publishing is enabled from `main` / `(root)`.
