@@ -2,6 +2,19 @@
 
 The current application is a consumer-product prototype using simulated money only.
 
+## Deployment
+
+Deployment has one source of truth and one production path:
+
+- GitHub repository: `haalukaa/Dire-Pay`
+- Production branch: `main`
+- Host: Vercel
+- Production domain: `dire-pay.vercel.app`
+- Entry point: `index.html`
+- Project config: `vercel.json`
+
+Do not use GitHub Pages, runtime GitHub HTML loaders, duplicate production projects, or deployments that point to local `/mnt/data` files. Preview deployments are for testing only; production should come from the current `main` commit.
+
 ## Production layers
 
 ### Identity
