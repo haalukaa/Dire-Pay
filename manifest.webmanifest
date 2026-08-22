@@ -1,0 +1,16 @@
+{
+  "name": "Dire Pay",
+  "short_name": "Dire Pay",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#070706",
+  "icons": [
+    {
+      "src": "/api/logo?v=4",
+      "sizes": "180x175",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
