@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/apple-touch-icon.png", "destination": "/api/logo" },
+    { "source": "/apple-touch-icon-precomposed.png", "destination": "/api/logo" },
+    { "source": "/favicon.ico", "destination": "/api/logo" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
